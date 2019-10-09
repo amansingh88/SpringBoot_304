@@ -16,15 +16,25 @@ public class Todo {
 
     @NotNull
     @Size(min=2)
-    private String taskname;
+    private String carmake;
 
     @NotNull
-    @Size(min=6)
-    private String duedate;
+    @Size(min=2)
+    private String carmodel;
 
     @NotNull
-    @Size(min=3)
-    private String priority;
+    @Size(min=4, max=4)
+    private String caryear;
+
+    public Todo(@NotNull @Size(min = 2) String carmake, @NotNull @Size(min = 2) String carmodel, @NotNull @Size(min = 4, max = 4) String caryear) {
+        this.carmake = carmake;
+        this.carmodel = carmodel;
+        this.caryear = caryear;
+    }
+
+    public Todo() {
+    }
+
 
     public long getId() {
         return id;
@@ -34,27 +44,27 @@ public class Todo {
         this.id = id;
     }
 
-    public String getTaskname() {
-        return taskname;
+    public String getCarmake() {
+        return carmake;
     }
 
-    public void setTaskname(String taskname) {
-        this.taskname = taskname;
+    public void setCarmake(String carmake) {
+        this.carmake = carmake;
     }
 
-    public String getDuedate() {
-        return duedate;
+    public String getCarmodel() {
+        return carmodel;
     }
 
-    public void setDuedate(String duedate) {
-        this.duedate = duedate;
+    public void setCarmodel(String carmodel) {
+        this.carmodel = carmodel;
     }
 
-    public String getPriority() {
-        return priority;
+    public String getCaryear() {
+        return caryear;
     }
 
-    public void setPriority(String priority) {
-        this.priority = priority;
+    public void setCaryear(String caryear) {
+        this.caryear = caryear;
     }
 }

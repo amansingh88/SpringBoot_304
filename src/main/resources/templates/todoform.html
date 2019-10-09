@@ -5,21 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Todo List</h1>
+<h1>Cars List</h1>
 <form action="#" th:action="@{/process}" th:object="${todo}" method="post">
     <input type="hidden" th:field="*{id}" />
 
-    Task Name: <input type="text" th:field="*{taskname}" />
-    <span th:if="${#fields.hasErrors('taskname')}"
-          th:errors="*{taskname}"></span><br/>
+    Car Make: <input type="text" th:field="*{carmake}" />
+    <span th:if="${#fields.hasErrors('carmake')}"
+          th:errors="*{carmake}"></span><br/>
 
-    Due Date: <input type= "text" th:field="*{duedate}" />
-    <span th:if="${#fields.hasErrors('duedate')}"
-          th:errors="*{duedate}"></span><br/>
+    Car Model: <input type= "text" th:field="*{carmodel}" />
+    <span th:if="${#fields.hasErrors('carmodel')}"
+          th:errors="*{carmodel}"></span><br/>
 
-    Priority: <input type="text" th:field="*{priority}" />
-    <span th:if="${#fields.hasErrors('priority')}"
-          th:errors="*{priority}"></span><br/>
+    Year: <input type="text" th:field="*{caryear}" />
+    <span th:if="${#fields.hasErrors('caryear')}"
+          th:errors="*{caryear}"></span><br/>
 
     <input type="submit" value="Submit" />
 
